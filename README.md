@@ -139,7 +139,9 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
 apt install -y nodejs
 
 cd /home/ubuntu
-git clone https://github.com/omorom/devops68-string-reversal.git
+git clone https://github.com/<your-project-name>/devops68-string-reversal.git 
+example 
+#git clone https://github.com/omorom/devops68-string-reversal.git
 
 # แก้ permission (สำคัญมาก)
 chown -R ubuntu:ubuntu /home/ubuntu/devops68-string-reversal
