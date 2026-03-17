@@ -171,29 +171,43 @@ output "app_public_url" {
 
 หลังจากทำการ ตั้งค่าเสร็จแล้ว ให้กลับมาที่ terminal และไปที่โฟลเดอร์ terraform จากนั้น
 รันคำสั่ง:
+```
 terraform init
+```
+
 จากนั้นรัน:
-terraform plan เพื่อดูว่า Terraform จะทำอะไรบ้าง และถ้าหากทุกอย่างถูกต้อง ให้รันคำสั่ง:
+```
+terraform plan 
+```
+เพื่อดูว่า Terraform จะทำอะไรบ้าง 
+และถ้าหากทุกอย่างถูกต้อง ให้รันคำสั่ง:
+```
 terraform apply
+```
 และพิมพ์ yes
 
 หลังจาก deploy เสร็จ จะได้ Public IP และสามารถเข้าใช้งานได้ที่:
 http://<public-ip>:3011/reverse?text=hello
 
 ถ้าแอพยังไม่ทำงาน ให้ SSH เข้าไป:
-ssh -i /path/to/key.pem ubuntu@<public-ip>
+ssh -i /path/to/key.pem ubuntu@<public-ip> ดูได้จากตอนที่ deply เสร็จแล้ว
 จากนั้นรัน:
 -cd /home/ubuntu/devops68-string-reversal
+
 -npm install express
+
 -node index.js
 
-ทำการทดสอบอีกครั้งโดยการ
+### ทำการทดสอบอีกครั้งโดยการ
 เปิด browser:
+```
 http://<public-ip>:3011/reverse?text=hello
+```
 
 จะได้ผลลัพธ์:
-
+```
 {
   "input": "hello",
   "reversed": "olleh"
 }
+```
