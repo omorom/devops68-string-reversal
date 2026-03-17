@@ -183,9 +183,9 @@ http://<public-ip>:3011/reverse?text=hello
 ถ้าแอพยังไม่ทำงาน ให้ SSH เข้าไป:
 ssh -i /path/to/key.pem ubuntu@<public-ip>
 จากนั้นรัน:
-cd /home/ubuntu/devops68-string-reversal
-npm install express
-node index.js
+-cd /home/ubuntu/devops68-string-reversal
+-npm install express
+-node index.js
 
 ทำการทดสอบอีกครั้งโดยการ
 เปิด browser:
