@@ -187,11 +187,20 @@ terraform apply
 และพิมพ์ yes
 
 หลังจาก deploy เสร็จ จะได้ Public IP และสามารถเข้าใช้งานได้ที่:
+
+ซึ่งในที่นี้ให้แทน <public-ip> ด้วย Public IP ที่ได้จากตอนที่ deploy เสร็จแล้ว และทดสอบด้วย port 3011 ตามที่โจทย์กำหนดไว้
+
+```
 http://<public-ip>:3011/reverse?text=hello
+```
 
 ถ้าแอพยังไม่ทำงาน ให้ SSH เข้าไป:
-ssh -i /path/to/key.pem ubuntu@<public-ip> ดูได้จากตอนที่ deply เสร็จแล้ว
+```
+ssh -i /path/to/key.pem ubuntu@<public-ip> #ดูได้จากตอนที่ deply เสร็จแล้ว
+```
+
 จากนั้นรัน:
+
 -cd /home/ubuntu/devops68-string-reversal
 
 -npm install express
